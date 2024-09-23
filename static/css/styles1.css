@@ -1,0 +1,109 @@
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+    color: #666;
+}
+
+strong {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+table td {
+    background-color: #fff;
+}
+
+
+a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: rgb(0, 0, 0);
+    background-color: #c4cedd;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #adadad;
+}
+#cve-description, #cve-severity, #cve-score, #cve-vector, #cve-access-vector,
+#cve-access-complexity, #cve-authentication, #cve-confidentiality-impact,
+#cve-integrity-impact, #cve-availability-impact {
+    color: #777;
+    font-weight: bold;
+}
+
+
+.cpe-table th, .cpe-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.cpe-table th {
+    background-color: #f1f1f1;
+}
+
+.cpe-table td {
+    background-color: #fff;
+}
+
+.cpe-table {
+    margin-top: 15px;
+}
+
+.cpe-table td:nth-child(1) {
+    width: 60%;
+}
+
+.cpe-table td:nth-child(2), .cpe-table td:nth-child(3) {
+    width: 20%;
+}
+
+
+.metrics-table {
+    margin-top: 15px;
+}
+
+.metrics-table td, .metrics-table th {
+    text-align: center;
+}
+
+.metrics-table th {
+    background-color: #e2e2e2;
+    color: #333;
+}
