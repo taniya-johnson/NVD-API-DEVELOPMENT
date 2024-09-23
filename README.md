@@ -40,6 +40,7 @@ Frontend:
 
 HTML templates (index.html, cve-detail.html) provide the layout for the list view and detailed view.
 CSS files (styles.css, styles1.css) for a clean and responsive interface.
+
 Input and Output:
 Input:
 Input to the system is the API response fetched from the NVD endpoint.
@@ -48,5 +49,55 @@ Output is a paginated web view of CVE entries along with detailed views for each
 Screenshots:
 screenshots of the UI rendering the list of CVEs and a detailed CVE page after deploying the Flask app locally is in the file
 
-regards
+
+#STEPS TO RUN THE PROJECT
+1. Create a Virtual Environment (if not already created):
+Open a terminal and navigate to project directory.
+Run the following command to create a virtual environment:
+
+code
+python -m venv env
+
+This will create a virtual environment named env in your project directory.
+
+2. Activate the Virtual Environment:
+On Windows:
+
+code
+.\env\Scripts\activate
+
+On macOS/Linux:
+
+Copy code
+source env/bin/activate
+
+Once activated, your terminal should show the name of the environment in parentheses, like (env).
+
+3. Install dependencies:
+If your project has dependencies, you can install them with pip after activating the environment:
+
+code
+pip install -r requirements.txt
+
+4. Run Python Files:
+After activating the virtual environment, you can run your Python files as you normally would:
+
+  To store the data in your json file
+
+code
+python fetch_cve.py
+
+To run the flask application
+
+code
+python app.py
+
+
+5. Deactivate the Environment:
+When you're done, deactivate the virtual environment by running
+Code
+.\env\Scripts\deactivate
+
+
+Regards
 Taniya Johnson
