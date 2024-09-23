@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+   <script src="{{ url_for('static', filename='js/app.js') }}"></script> 
+    <title>CVE List</title>
+</head>
+<body>
+    <h1>CVE List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>CVE ID</th>
+                <th>Source Identifier</th>
+                <th>Published Date</th>
+                <th>Last Modified</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="cve-table-body">
+            {% for cve in cves %}
+            <tr>
+                <td><a href="/cve/details/{{ cve['cve']['id'] }}">{{ cve['cve']['id'] }}</a></td>
+                <td>{{ cve['cve']['sourceIdentifier'] }}</td>
+                <td>{{ cve['cve']['published'] }}</td>
+                <td>{{ cve['cve']['lastModified'] }}</td>
+                <td>{{ cve['cve']['vulnStatus'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        
+    </table>
+
+    <div class="pagination">
+        <label for="resultsPerPage">Results per page:</label>
+        <select id="resultsPerPage">
+            <option value="10">10</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+    </div>
+    </div>
+</body>
+</html>
